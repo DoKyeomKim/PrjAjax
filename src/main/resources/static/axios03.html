@@ -20,7 +20,12 @@
     	let gpsy = xmlObj.querySelector('gpsy').innerHTML;
     	let stoptype = xmlObj.querySelector('stoptype').innerHTML;
     	let html = `<ul
-    	<li>${bstopid}</li>
+    	<li>정류소아이다 : ${bstopid}</li>
+    	<li>정류소명 : ${bstopnm}</li>
+    	<li>정류소번호 : ${arsno}</li>
+    	<li>GPS X : ${gpsx}</li>
+    	<li>GPS Y : ${gpsy}</li>
+    	<li>정류소구분 : ${stoptype}</li>
     	</ul>`;
     	
     	return html;
