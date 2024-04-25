@@ -6,13 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
-// @Controller + @RequestMapping    :  .jsp, .mustache츨 찾고
-// @Controller + @RequestMapping + @responseBody 
-//   : .jsp, .mustache츨 찾지않고 data를 출력한다 : 새로운 페이지에
-// @Controller +  @ResponseBody : @RestController
+// @Controller + @RequestMapping    :  .jsp, .mustache 를 찾고
+// @Controller + @RequestMapping + @responseBody : .jsp, .mustache 를 찾지않고 data 를 출력한다 : 새로운 페이지에
+// @Controller + @ResponseBody : @RestController
 //  모든 함수에 @ResponseBody 가 적용된다
 //  @Controller     : view 파일을 리턴하고
-//  @RestController : data를 리턴한다
+//  @RestController : data 를 리턴한다
 @Controller
 public class MvcController {
 	@RequestMapping("/mvc")
