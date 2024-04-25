@@ -6,6 +6,17 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
+<fieldset>
+<legend>버스정류장정보</legend>
+<label>한 페이지당 줄 수</label>
+<input type="text" id="numOfRows" value="10" />
+<label>페이지 번호</label>
+<input type="text" id="pageNo" value="1" />
+<label>정류소 명</label>
+<input type="text" id="bstopnm" value="부산시청" />
+<label>정류소 번호</label>
+<input type="text" id="arsno" value="13708" />
+</fieldset>
   <button>Ok</button>
   <div id="output"></div>
   
@@ -20,7 +31,7 @@
     	let gpsy = xmlObj.querySelector('gpsy').innerHTML;
     	let stoptype = xmlObj.querySelector('stoptype').innerHTML;
     	let html = `<ul
-    	<li>정류소아이다 : ${bstopid}</li>
+    	<li>정류소아이디 : ${bstopid}</li>
     	<li>정류소명 : ${bstopnm}</li>
     	<li>정류소번호 : ${arsno}</li>
     	<li>GPS X : ${gpsx}</li>
@@ -38,7 +49,19 @@
     // /GetBus 를 자바스크립트가 가져오는 방식
     const btnOkEl = document.querySelector('button')
     btnOkEl.addEventListener('click', () => {
-    	axios.get('/GetBus')
+    	let numOfRows = document.querySelector('#numOfRows').value;
+    	let pageNo = document.querySelector('#pageNo').value;
+    	let bstopnm = document.querySelector('#bstopnm').value;
+    	let arsno = document.querySelector('#arsno').value;
+    	let params ={
+    			 numOfRows : numOfRows,
+    			 pageNo : pageNo,
+    			 bstopnm : bstopnm,
+    			 arsno : arsno
+    		
+    	}
+    	// 뭔가 빼먹음
+    	axios.post('/GetBus', new URLSearchParams(params))
     	     .then((response) => {
     	    	 console.log(response);
     	    	 console.log(response.data);

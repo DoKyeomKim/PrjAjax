@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<response>
+	<header>
+		<resultCode>00</resultCode>
+		<resultMsg>NORMAL SERVICE</resultMsg>
+	</header>
+	<body>
+		<items>
+			<item>
+				<bstopid>167970102</bstopid>
+				<bstopnm>영주삼거리</bstopnm>
+				<arsno>01001</arsno>
+				<gpsx>129.03332177581</gpsx>
+				<gpsy>35.115355761619</gpsy>
+				<stoptype>일반</stoptype>
+			</item>
+			<item>
+				<bstopid>169310303</bstopid>
+				<bstopnm>영주삼거리</bstopnm>
+				<arsno>01002</arsno>
+				<gpsx>129.03303030469</gpsx>
+				<gpsy>35.115282635238</gpsy>
+				<stoptype>일반</stoptype>
+			</item>
+		</items>
+		<numOfRows>10</numOfRows>
+		<pageNo>1</pageNo>
+		<totalCount>2</totalCount>
+	</body>
+</response>
